@@ -1,24 +1,40 @@
-# README
+# Rails simple namespaced Articles api with Postgres 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Rails namespaced API only for testing, simple title and body blog articles, Postgres DB, seed file.
 
-Things you may want to cover:
+## Author
+
+Paul Anthony McGowan
+
+## Hosted version URL 
+
+https://quiet-headland-00205.herokuapp.com/api/v1/articles
+
+(Base get request url)
 
 * Ruby version
 
+Ruby 2.7.2
+
+Rails 6.0.37
+
 * System dependencies
+
+Rails, Ruby, Postgresql
 
 * Configuration
 
 * Database creation
+(put in user/password)
 
-* Database initialization
+rails db:create
+rails db:migrate
+rail db:seed
 
-* How to run the test suite
+rails s
 
-* Services (job queues, cache servers, search engines, etc.)
+http://localhost/api/v1/articles
 
-* Deployment instructions
 
-* ...
+
+
