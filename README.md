@@ -1,6 +1,8 @@
 # Rails simple namespaced Articles api with Postgres 
 
-Rails namespaced API only for testing, simple title and body blog articles, Postgres DB, seed file.
+Rails namespaced API only for testing, simple title and body attribute blog articles, Postgres DB, seed file.
+
+Can be used as a starter to build out bigger and more complex back ends.
 
 ## Author
 
