@@ -1,33 +1,18 @@
-articles = Article.create([
-   
-    {
-        "id": 5,
-        "title": "The Proper Study",
-        "body": "Error est eveniet et."
-     
-    },
-    {
-        "id": 4,
-        "title": "Stranger in a Strange Land",
-        "body": "Non cupiditate mollitia et."
-   
-    },
-    {
-        "id": 3,
-        "title": "The Road Less Traveled",
-        "body": "Necessitatibus distinctio repudiandae dolorum."
-     
-    },
-    {
-        "id": 2,
-        "title": "Far From the Madding Crowd",
-        "body": "Sed voluptas quidem fugit."
-    },
-    {
-        "id": 1,
-        "title": "The Doors of Perception",
-        "body": "Eligendi et rerum inventore."
-       
-    }
-]
-)
+user = User.create(
+    name: Faker::Name.name,
+    email: Faker::Internet.safe_email,
+    password_digest: '123456789'
+    )
+    article = Article.new(
+    title: Faker::Lorem.sentence(word_count: 5),
+    body: Faker::Lorem.paragraphs(number: 4),
+    )
+    article.user = user
+    article.image.attach(
+    io: File.open('app/dummy.jpg'),
+    filename: 'dummy.jpg'
+    )
+    article.save!
+
+
+
